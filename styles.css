@@ -337,29 +337,35 @@ a[target="_blank"]::after {
 /* fact pills, listed in a static row below the photo */
 .hero-facts {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row nowrap;
   justify-content: center;
-  gap: 0.55rem;
+  gap: 0.4rem;
   margin: 0 auto 1.5rem;
+  max-width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+.hero-facts::-webkit-scrollbar { display: none; }
 
 .hero-fact {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
   background: var(--pill-dark);
   color: #fff;
-  font-size: 0.76rem;
+  font-size: 0.66rem;
   font-weight: 700;
-  padding: 0.4rem 0.9rem 0.4rem 0.4rem;
+  padding: 0.3rem 0.7rem 0.3rem 0.3rem;
   border-radius: var(--radius-pill);
   box-shadow: 0 10px 24px -14px rgba(18, 19, 26, 0.45);
   white-space: nowrap;
 }
 
 .hero-fact-icon {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background: var(--accent);
   display: flex;
@@ -367,7 +373,7 @@ a[target="_blank"]::after {
   justify-content: center;
   flex-shrink: 0;
 }
-.hero-fact-icon svg { width: 13px; height: 13px; color: #fff; }
+.hero-fact-icon svg { display: block; width: 10px; height: 10px; color: #fff; }
 
 .hero-tags {
   display: flex;
